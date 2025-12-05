@@ -5,8 +5,9 @@
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/.venv1" />
       <excludeFolder url="file://$MODULE_DIR$/venv_tf " />
+      <excludeFolder url="file://$MODULE_DIR$/tf_env/bin/python " />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.10 (ResNet50_MiniMIAS)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.10 (ResNet50_MiniMIAS) (3)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
