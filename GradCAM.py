@@ -4,18 +4,23 @@ import matplotlib.pyplot as plt
 import cv2
 import os
 
-MODEL_PATH = "/Users/pepedesintas/PycharmProjects/ResNet50_MiniMIAS/resnet50_mias.h5"
+MODEL_PATH = "/Users/pepedesintas/PycharmProjects/ResNet50_MiniMIAS/resnet50_mias2.h5"
 IMAGE_PATH = "/Users/pepedesintas/Desktop/TFG/all-mias/outputData/test/abnormal/mdb001.png"
 IMG_SIZE = (224, 224)
 
 model = tf.keras.models.load_model(MODEL_PATH)
 
 def load_and_prepare(img_path):
-    img = tf.io.read_file(img_path)
-    img = tf.io.decode_image(img, channels=3)
-    img = tf.image.resize(img, IMG_SIZE)
-    img = tf.keras.applications.resnet50.preprocess_input(img)
-    return img, img.numpy()
+    img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)  # usar original real
+    orig = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)  # convertir a RGB
+    orig = cv2.resize(orig, IMG_SIZE)
+
+    # modelo recibe float32
+    img = orig.astype("float32")
+    img_pre = tf.keras.applications.resnet50.preprocess_input(img)
+
+    return img_pre, orig  # preprocesada / original
+
 
 def make_gradcam_heatmap(img_array, model, layer_name="conv5_block3_out"):
     grad_model = tf.keras.models.Model(
