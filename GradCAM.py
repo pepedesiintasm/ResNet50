@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import cv2
 import os
 
-MODEL_PATH = "/Users/pepedesintas/PycharmProjects/ResNet50_MiniMIAS/resnet50_mias_DA.h5"
+MODEL_PATH = "/Users/pepedesintas/PycharmProjects/ResNet50_MiniMIAS/resnet50_mias_DA_2.h5"
 IMAGE_PATH = "/Users/pepedesintas/Desktop/TFG/all-mias/outputData/test/abnormal/mdb001.png"
 IMG_SIZE = (224, 224)
 

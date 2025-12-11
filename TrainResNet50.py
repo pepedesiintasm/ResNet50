@@ -55,11 +55,13 @@ test_ds  = test_ds.cache().prefetch(AUTOTUNE)
 # Artificially increases the dataset
 # it Helps the model generalize better
 # Reduces overfitting
+#TODO we have augmented the augmentation
 data_augmentation = tf.keras.Sequential([
     layers.RandomFlip("horizontal"),
-    layers.RandomRotation(0.05),
-    layers.RandomZoom(0.10),
-    layers.RandomContrast(0.15),
+    layers.RandomRotation(0.1),
+    layers.RandomZoom(0.15),
+    layers.RandomContrast(0.2),
+    layers.RandomBrightness(0.2),
 ])
 # in mammograms it is not always advisable to use horizontal flips and rotations, since they can alter the anatomical meaning.
 
@@ -74,8 +76,12 @@ base_model = ResNet50(include_top=False, weights="imagenet", input_tensor=x)
 #Freezes the weights of ResNet50
 #They are not modified during training
 #Prevents overfitting (ideal with a small dataset)
-base_model.trainable = False
+#base_model.trainable = False
 # all up here is TRANSFER LEARNING
+
+base_model.trainable = True
+for layer in base_model.layers[:100]:
+    layer.trainable = False
 
 
 # Reduces the feature maps to a vector → very efficient.
@@ -83,14 +89,15 @@ x = layers.GlobalAveragePooling2D()(base_model.output)
 # Dense layer to learn more abstract patterns.
 x = layers.Dense(256, activation="relu")(x)
 # Randomly turns off 40% of neurons → prevents overfitting.
-x = layers.Dropout(0.4)(x)
+# Reduced to 15% to do not lose info
+x = layers.Dropout(0.15)(x)
 # Final output → probability of abnormality (binary).
 outputs = layers.Dense(1, activation="sigmoid")(x)
 
 model = models.Model(inputs, outputs)
 
 model.compile(
-    optimizer=tf.keras.optimizers.Adam(1e-4),
+    optimizer=tf.keras.optimizers.Adam(1e-5),
     loss="binary_crossentropy", # loss function (binary-> 2 classes: normal, abnormal)
     metrics=["accuracy", tf.keras.metrics.AUC(name="auc")]
 )
@@ -101,7 +108,7 @@ callbacks = [
     # Stops training if the AUC does not improve for 5 epochs → prevents overfitting.
     EarlyStopping(monitor="val_auc", patience=5, mode="max", restore_best_weights=True),
     #saves the best model according to validation
-    ModelCheckpoint("resnet50_mias_DA.h5", monitor="val_auc", mode="max", save_best_only=True)
+    ModelCheckpoint("resnet50_mias_DA_3.h5", monitor="val_auc", mode="max", save_best_only=True)
 ]
 
 # -> TRAINING (the real learning)
