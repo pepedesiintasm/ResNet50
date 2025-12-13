@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import cv2
 import os
 
-MODEL_PATH = "//resnet50_mias_DA_3.h5"
-IMAGE_PATH = "/Users/pepedesintas/Desktop/TFG/all-mias/outputData/test/abnormal/mdb001.png"
+MODEL_PATH = "/Users/pepedesintas/PycharmProjects/ResNet50/models/resnet50_mias_prueba.h5"
+IMAGE_PATH = "/Users/pepedesintas/Desktop/TFG/all-mias/stage1_normal_vs_lesion/test/lesion/lesion_0.png"
 IMG_SIZE = (224, 224)
 
 model = tf.keras.models.load_model(MODEL_PATH)
