@@ -15,7 +15,7 @@ from sklearn.metrics import (
 # CONFIG
 # ======================
 DATA_DIR = "/Users/pepedesintas/Desktop/TFG/CBIS_DDSM/processed"
-MODEL_PATH = "../models/resnet50_cbis_final.h5"
+MODEL_PATH = "../models/resnet50_cbis_finalV3.h5"
 IMG_SIZE = (224, 224)
 BATCH_SIZE = 16
 
