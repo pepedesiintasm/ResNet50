@@ -1,0 +1,10 @@
+metric,value
+loss,0.4640325605869293
+accuracy,0.8008849620819092
+auc_tf,0.9413516521453857
+auc_sklearn,0.9483216237314598
+tp,58
+tn,304
+fp,1
+fn,89
+threshold,0.5

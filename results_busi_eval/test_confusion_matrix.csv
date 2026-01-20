@@ -1,0 +1,3 @@
+,pred_benign,pred_malignant
+true_benign,66,1
+true_malignant,24,8
