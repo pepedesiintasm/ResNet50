@@ -8,7 +8,7 @@ from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 # ======================
 # CONFIG
 # ======================
-DATA_DIR = "/Users/pepedesintas/Desktop/TFG/CBIS_DDSM/processed"
+DATA_DIR = "/Users/pepedesintas/Desktop/TFG/DDBB/CBIS_DDSM/processed"
 IMG_SIZE = (224, 224)
 BATCH_SIZE = 16
 EPOCHS = 25

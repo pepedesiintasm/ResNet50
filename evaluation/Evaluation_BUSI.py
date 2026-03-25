@@ -267,7 +267,7 @@ y_prob = model.predict(test_ds).ravel()
 y_true = np.concatenate([y.numpy() for _, y in test_ds]).astype(int)
 
 # Umbral binario
-threshold = 0.5
+threshold = 0.3
 y_pred = (y_prob >= threshold).astype(int)
 
 # ---- Confusion Matrix

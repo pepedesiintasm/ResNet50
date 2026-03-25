@@ -6,7 +6,7 @@ import cv2
 # CONFIG
 # =====================
 
-BASE_DIR = "/Users/pepedesintas/Desktop/TFG/all-mias"
+BASE_DIR = "/Users/pepedesintas/Desktop/TFG/DDBB/all-mias"
 ANNOT_FILE = os.path.join(BASE_DIR, "mias_classification.txt")
 IMG_DIR = BASE_DIR
 

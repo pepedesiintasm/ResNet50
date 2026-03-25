@@ -6,7 +6,7 @@ from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 import os
 
 #DATA_DIR = "/Users/pepedesintas/Desktop/TFG/all-mias/outputData"
-DATA_DIR = "/Users/pepedesintas/Desktop/TFG/all-mias/stage1_normal_vs_lesion"
+DATA_DIR = "/Users/pepedesintas/Desktop/TFG/DDBB/all-mias/stage1_normal_vs_lesion"
 #DATA_DIR = "/Users/pepedesintas/Desktop/TFG/all-mias/stage2_benign_vs_malignant"
 
 
