@@ -1,0 +1,29 @@
+{
+    "experiment_name": "busi_resnet50_frozen",
+    "data_dir": "/Users/pepedesintas/Desktop/TFG/DDBB/BUSI_processed",
+    "img_size": [
+        224,
+        224
+    ],
+    "batch_size": 16,
+    "epochs_configured": 10,
+    "epochs_trained": 10,
+    "training_time_sec": 489.64743089675903,
+    "test_loss_keras": 0.4402569830417633,
+    "test_accuracy_keras": 0.0,
+    "test_auc_keras": 0.0,
+    "test_precision_keras": 0.0,
+    "test_recall_keras": 0.0,
+    "accuracy": 0.797979797979798,
+    "precision": 0.6363636363636364,
+    "recall_sensitivity": 0.875,
+    "specificity": 0.7611940298507462,
+    "f1_score": 0.7368421052631579,
+    "roc_auc": 0.9034514925373135,
+    "pr_auc": 0.8270357538618301,
+    "balanced_accuracy": 0.8180970149253731,
+    "tn": 51,
+    "fp": 16,
+    "fn": 4,
+    "tp": 28
+}

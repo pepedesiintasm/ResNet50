@@ -1,0 +1,29 @@
+{
+    "experiment_name": "resnet50_stage1_frozen",
+    "data_dir": "/Users/pepedesintas/Desktop/TFG/DDBB/all-mias//stage1_normal_vs_lesion",
+    "img_size": [
+        224,
+        224
+    ],
+    "batch_size": 16,
+    "epochs_configured": 20,
+    "epochs_trained": 9,
+    "training_time_sec": 229.97892308235168,
+    "test_loss_keras": 0.6460242867469788,
+    "test_accuracy_keras": 0.0,
+    "test_auc_keras": 0.0,
+    "test_precision_keras": 0.0,
+    "test_recall_keras": 0.0,
+    "accuracy": 0.6274509803921569,
+    "precision": 0.6444444444444445,
+    "recall_sensitivity": 0.90625,
+    "specificity": 0.15789473684210525,
+    "f1_score": 0.7532467532467533,
+    "roc_auc": 0.6151315789473684,
+    "pr_auc": 0.716524590161861,
+    "balanced_accuracy": 0.5320723684210527,
+    "tn": 3,
+    "fp": 16,
+    "fn": 3,
+    "tp": 29
+}

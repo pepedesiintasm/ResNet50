@@ -1,0 +1,32 @@
+{
+    "experiment_name": "busi_resnet50_finetuning",
+    "data_dir": "/Users/pepedesintas/Desktop/TFG/DDBB/BUSI_processed",
+    "img_size": [
+        224,
+        224
+    ],
+    "batch_size": 16,
+    "initial_epochs": 10,
+    "fine_tune_epochs": 10,
+    "total_epochs_configured": 20,
+    "epochs_trained": 20,
+    "fine_tune_at_layer": 100,
+    "training_time_sec": 1207.5918109416962,
+    "test_loss_keras": 0.3847225606441498,
+    "test_accuracy_keras": 0.0,
+    "test_auc_keras": 0.0,
+    "test_precision_keras": 0.0,
+    "test_recall_keras": 0.0,
+    "accuracy": 0.8282828282828283,
+    "precision": 0.6829268292682927,
+    "recall_sensitivity": 0.875,
+    "specificity": 0.8059701492537313,
+    "f1_score": 0.7671232876712328,
+    "roc_auc": 0.9323694029850746,
+    "pr_auc": 0.8910614413900586,
+    "balanced_accuracy": 0.8404850746268657,
+    "tn": 54,
+    "fp": 13,
+    "fn": 4,
+    "tp": 28
+}
