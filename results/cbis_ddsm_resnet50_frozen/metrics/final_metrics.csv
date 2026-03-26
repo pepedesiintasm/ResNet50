@@ -1,0 +1,2 @@
+experiment_name,data_dir,img_size,batch_size,epochs_configured,epochs_trained,training_time_sec,test_loss_keras,test_accuracy_keras,test_auc_keras,test_precision_keras,test_recall_keras,accuracy,precision,recall_sensitivity,specificity,f1_score,roc_auc,pr_auc,balanced_accuracy,tn,fp,fn,tp
+cbis_ddsm_resnet50_frozen,/Users/pepedesintas/Desktop/TFG/DDBB/CBIS_DDSM/processed,"(224, 224)",16,10,10,9223.559792041779,0.58231121301651,0.0,0.0,0.0,0.0,0.6963103122043519,0.6293706293706294,0.625,0.7456,0.627177700348432,0.7456703703703704,0.6975724397146938,0.6853,466,159,162,270

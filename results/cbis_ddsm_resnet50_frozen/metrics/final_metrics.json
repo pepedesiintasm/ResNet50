@@ -1,0 +1,29 @@
+{
+    "experiment_name": "cbis_ddsm_resnet50_frozen",
+    "data_dir": "/Users/pepedesintas/Desktop/TFG/DDBB/CBIS_DDSM/processed",
+    "img_size": [
+        224,
+        224
+    ],
+    "batch_size": 16,
+    "epochs_configured": 10,
+    "epochs_trained": 10,
+    "training_time_sec": 9223.559792041779,
+    "test_loss_keras": 0.58231121301651,
+    "test_accuracy_keras": 0.0,
+    "test_auc_keras": 0.0,
+    "test_precision_keras": 0.0,
+    "test_recall_keras": 0.0,
+    "accuracy": 0.6963103122043519,
+    "precision": 0.6293706293706294,
+    "recall_sensitivity": 0.625,
+    "specificity": 0.7456,
+    "f1_score": 0.627177700348432,
+    "roc_auc": 0.7456703703703704,
+    "pr_auc": 0.6975724397146938,
+    "balanced_accuracy": 0.6853,
+    "tn": 466,
+    "fp": 159,
+    "fn": 162,
+    "tp": 270
+}
