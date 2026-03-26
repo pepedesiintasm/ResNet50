@@ -8,7 +8,7 @@ from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 # ======================
 # CONFIGURATION
 # ======================
-DATA_DIR = "/Users/pepedesintas/Desktop/TFG/CBIS_DDSM/processed"
+DATA_DIR = "/Users/pepedesintas/Desktop/TFG/DDBB/CBIS_DDSM/processed"
 IMG_SIZE = (224, 224)
 # Probar BATCH de 32 (si no peta la RAM) -> menos steps = menos tiempo
 BATCH_SIZE = 16
