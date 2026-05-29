@@ -4,9 +4,11 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 from tensorflow.keras.preprocessing import image as kimage
 
-MODEL_PATH = "../models/resnet50_busi_final.keras"   # tu modelo
-IMG_PATH   = "/Users/pepedesintas/Desktop/TFG/busi_processed/test/malignant/malignant (17).png"
-OUT_DIR    = "../results_busi/gradcam"
+MODEL_PATH = "/Users/pepedesintas/Desktop/TFG/Results/ResNet50/ResNet50_SeparateDDBB/BUSI/busi_resnet50_finetuning/model/best_model.keras"
+
+IMAGE_PATH = "/Users/pepedesintas/Desktop/busi5.png"
+
+OUTPUT_DIR = "/Users/pepedesintas/Desktop/TFG/GradCAM"
 IMG_SIZE   = (224, 224)
 LAST_CONV_LAYER = "conv5_block3_out"
 

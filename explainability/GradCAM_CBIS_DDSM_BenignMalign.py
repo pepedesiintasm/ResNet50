@@ -11,7 +11,7 @@ MODEL_PATH = "/Users/pepedesintas/PycharmProjects/ResNet50/models/resnet50_cbis_
 
 # pon aquí UNA imagen concreta (benign o malignant)
 #IMAGE_PATH = "/Users/pepedesintas/Desktop/TFG/CBIS_DDSM/processed/test/benign/1.3.6.1.4.1.9590.100.1.2.339524904810678180527824073070691579819_1-257.jpg"
-IMAGE_PATH = "/Users/pepedesintas/Desktop/TFG/CBIS_DDSM/processed/test/malignant/1.3.6.1.4.1.9590.100.1.2.389547136412156402614281391652766446418_1-206.jpg"
+IMAGE_PATH = "/Users/pepedesintas/Desktop/cbis.jpg"
 
 IMG_SIZE = (224, 224)
 LAST_CONV_LAYER = "conv5_block3_out"  # ResNet50 estándar
