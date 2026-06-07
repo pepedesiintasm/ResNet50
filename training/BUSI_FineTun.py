@@ -130,7 +130,7 @@ outputs = layers.Dense(1, activation="sigmoid")(x)
 model = models.Model(inputs, outputs)
 
 model.compile(
-    optimizer=tf.keras.optimizers.Adam(1e-4),
+    optimizer=tf.keras.optimizers.Adam(1e-5),
     loss="binary_crossentropy",
     metrics=[
         "accuracy",
