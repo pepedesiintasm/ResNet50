@@ -26,4 +26,3 @@ def delete_pgm_files(directory):
 if __name__ == "__main__":
     convert_pgm_to_png(DIR)
     delete_pgm_files(DIR)
-    #comentario
